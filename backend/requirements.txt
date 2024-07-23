@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+databases
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+databases
+pydantic-settings

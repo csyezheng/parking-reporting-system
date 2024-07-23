@@ -1,0 +1,17 @@
+from fastapi import FastAPI
+from .routers import parking_lot, occupancy, revenue, transactions, turnover, peak_usage, utilization, revenue_distribution, comparative
+from .database import engine, Base
+
+app = FastAPI()
+
+Base.metadata.create_all(bind=engine)
+
+app.include_router(parking_lot.router)
+app.include_router(occupancy.router)
+app.include_router(revenue.router)
+app.include_router(transactions.router)
+app.include_router(turnover.router)
+app.include_router(peak_usage.router)
+app.include_router(utilization.router)
+app.include_router(revenue_distribution.router)
+app.include_router(comparative.router)
