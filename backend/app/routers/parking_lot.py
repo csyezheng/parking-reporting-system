@@ -15,12 +15,7 @@ def create_parking_lot(parking_lot: schemas.ParkingLotCreate, db: Session = Depe
 
 @router.get("/", response_model=list[schemas.ParkingLot])
 def read_parking_lots(skip: int = 0, limit: int = 10, db: Session = Depends(get_db)):
-    import pdb;pdb.set_trace()
-    try:
-        parking_lots = crud.get_parking_lots(db, skip=skip, limit=limit)
-        import pdb;pdb.set_trace()
-    except Exception as e:
-        import pdb;pdb.set_trace()
+    parking_lots = crud.get_parking_lots(db, skip=skip, limit=limit)
     return parking_lots
 
 @router.get("/{parking_lot_id}", response_model=schemas.ParkingLot)

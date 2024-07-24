@@ -1,4 +1,5 @@
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from . import models, schemas
 
 def get_parking_lot(db: Session, parking_lot_id: int):
@@ -43,6 +44,14 @@ def create_parking_transaction(db: Session, parking_transaction: schemas.Parking
     db.commit()
     db.refresh(db_parking_transaction)
     return db_parking_transaction
+
+def get_duration_histogram(db: Session, skip: int = 0, limit: int = 10):
+    results = db.query(
+        models.ParkingTransaction.parking_lot_id,
+        func.date_part('hour', models.ParkingTransaction.duration).label('hours'),
+        func.count(models.ParkingTransaction.id).label('count')
+    ).group_by('hours').all()
+    return results
 
 def get_turnover_records(db: Session, skip: int = 0, limit: int = 10):
     return db.query(models.TurnoverRecord).offset(skip).limit(limit).all()

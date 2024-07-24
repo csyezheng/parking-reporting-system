@@ -1,0 +1,44 @@
+/* Container for the occupancy chart */
+.occupancy-chart-container {
+    width: 30%;
+    max-width: 800px;
+    height: 400px; /* Adjust the height as needed */
+    margin: 20px 0; /* Space around the chart */
+    position: relative;
+}
+
+/* Title of the chart */
+.occupancy-chart-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Chart legend */
+.occupancy-chart-legend {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart tooltips */
+.occupancy-chart-tooltip {
+    background-color: #333; /* Dark background for tooltips */
+    color: #fff; /* White text color */
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .occupancy-chart-container {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

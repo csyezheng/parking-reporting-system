@@ -1,0 +1,50 @@
+/* src/components/HeatmapChart.css */
+
+.heatmap-chart-container {
+    width: 30%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heatmap-chart-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.heatmap-chart {
+    display: block;
+    height: 500px;
+    width: 100%;
+}
+
+.heatmap-legend {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.heatmap-legend-item {
+    margin: 0 5px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.heatmap-legend-item.low {
+    background-color: #f5b7b1; /* Light red */
+}
+
+.heatmap-legend-item.medium {
+    background-color: #f7dc6f; /* Light yellow */
+}
+
+.heatmap-legend-item.high {
+    background-color: #82e0aa; /* Light green */
+}

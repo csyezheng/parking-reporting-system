@@ -1,0 +1,72 @@
+/* Container for the peak usage heatmap */
+.peak-usage-heatmap-container {
+    width: 30%;
+    max-width: 800px;
+    height: 500px; /* Adjust height as needed */
+    margin: 20px 0; /* Space around the heatmap */
+    position: relative;
+}
+
+/* Title of the heatmap */
+.peak-usage-heatmap-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Chart legend */
+.peak-usage-heatmap-legend {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Chart header if needed */
+.peak-usage-heatmap-header {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Optional: Chart description if needed */
+.peak-usage-heatmap-description {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Styles for the color scale legend */
+.peak-usage-heatmap-color-scale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.peak-usage-heatmap-color-scale span {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Example color gradient scale */
+.peak-usage-heatmap-color-scale-gradient {
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ffffff, #ffffcc, #ffcc99, #ff6600); /* Example gradient */
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Optional: Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .peak-usage-heatmap-container {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

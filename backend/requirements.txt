@@ -9,3 +9,5 @@ sqlalchemy
 pydantic
 databases
 pydantic-settings
+psycopg2
+fastapi[all]

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Date, DateTime, DECIMAL, ForeignKey
+from sqlalchemy import Column, Integer, String, Date, DateTime, DECIMAL, ForeignKey, Interval
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from .database import Base
@@ -45,6 +45,7 @@ class ParkingTransaction(Base):
     parking_lot_id = Column(Integer, ForeignKey("parking_lots.id"))
     entry_time = Column(DateTime, nullable=False)
     exit_time = Column(DateTime)
+    duration = Column(Interval)
     fee = Column(DECIMAL, nullable=False)
     parking_lot = relationship("ParkingLot", back_populates="transactions")
 

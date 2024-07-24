@@ -1,0 +1,55 @@
+/* Container for the revenue pie chart */
+.revenue-piechart-container {
+    width: 30%;
+    max-width: 800px;
+    height: 500px; /* Adjust height as needed */
+    margin: 20px 0; /* Space around the pie chart */
+    position: relative;
+}
+
+/* Title of the pie chart */
+.revenue-piechart-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Chart legend */
+.revenue-piechart-legend {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Chart header if needed */
+.revenue-piechart-header {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Optional: Chart description if needed */
+.revenue-piechart-description {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Styles for the pie chart slices */
+.revenue-piechart-slice {
+    border: 1px solid #ccc; /* Border for better visibility */
+}
+
+/* Optional: Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .revenue-piechart-container {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}

@@ -1,0 +1,69 @@
+/* General error container styling */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Error header */
+.error-header {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Error message */
+.error-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Optional: Additional details */
+.error-details {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Button or link to return to home or previous page */
+.error-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.error-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .error-header {
+        font-size: 36px;
+    }
+
+    .error-message {
+        font-size: 18px;
+    }
+
+    .error-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}

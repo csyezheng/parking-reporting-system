@@ -1,5 +1,6 @@
+from typing import List
 from datetime import date, datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, conint, PositiveInt
 
 class ParkingLotBase(BaseModel):
     name: str
@@ -57,6 +58,15 @@ class ParkingTransaction(ParkingTransactionBase):
 
     class Config:
         orm_mode = True
+
+class DurationBucket(BaseModel):
+    start: int  # Start of the duration interval in minutes
+    end: int    # End of the duration interval in minutes
+    count: PositiveInt  # Number of occurrences in this interval
+
+class DurationHistogram(BaseModel):
+    total_count: PositiveInt  # Total number of occurrences
+    buckets: List[DurationBucket]  # List of duration buckets
 
 class TurnoverRecordBase(BaseModel):
     parking_lot_id: int
